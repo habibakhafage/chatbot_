@@ -3,6 +3,8 @@ from fastapi import FastAPI, HTTPException
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from typing import List, Dict
+from chatbot_.backend.rag import retrieve_answer
+
 
 load_dotenv()
 
@@ -20,6 +22,13 @@ def chat(query: Query):
     try:
 
         history = chat_histories.get(query.user_id, [])
+
+         #  NEW: Get relevant RAG context
+        rag_context = retrieve_answer(query.message)
+
+        #  Inject RAG context at the top
+        prompt = f"<|system|>\nUse the following context to answer the user:\n{rag_context}\n\n"
+
 
         prompt = ""
         for turn in history:
