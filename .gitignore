@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+.env.* 
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python egg files
+*.egg-info/
+*.egg
+
+# Logs and local databases
+*.log
+*.sqlite3
+
+# ngrok
+ngrok.yml
+*.ngrok.*
+*.exe
+
+# Streamlit cache
+.streamlit/
+.cache/
+
+# System files
+*.bak
+*.swp
+
+# Test coverage reports
+htmlcov/
+coverage.xml
+*.cover
+
+# Output folders
+build/
+dist/
