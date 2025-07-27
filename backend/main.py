@@ -3,7 +3,8 @@ from fastapi import FastAPI, HTTPException
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from typing import List, Dict
-from chatbot_.backend.rag import retrieve_answer
+from rag import retrieve_answer
+
 
 
 load_dotenv()
